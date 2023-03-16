@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{{page_title}}</title>
+  <style>
+    h1 {text-align: center;
+    color: black; margin: auto}
+    body {text-align: center;
+    background: lightblue;
+    background-size: cover;}
+    p {color:black; margin: auto;}
+    select{display: inline-block;
+    max-width: 200px;}
+    form, select, input,label {padding-top: 4px; }
+    label {color: black; margin: auto}
+  </style>
+</head>
+  <body>
+    <h1>Welcome to the type 1 diabetes recipe finder!</h1>
+  <form action="response" method="GET">
+    <label for="maxCarbs">Enter the maximum amount of carbs you'd like to have</label>
+    <input type="number" id="maxCarbs" name="maxCarbs" value="1">
+    <br>
+
+    <label for="type">Please select the type of recipe you want </label>
+    <br>
+    <select id="type" name="type" size="14" style="width: 150px;">
+    <option value="main course">main course</option>
+    <option value="side dish">side dish</option>
+    <option value="dessert">dessert</option>
+    <option value="appetizer">appetizer</option>
+    <option value="salad">salad</option>
+    <option value="bread">bread</option>
+    <option value="breakfast">breakfast</option>
+    <option value="soup">soup</option>
+    <option value="beverage">beverage</option>
+    <option value="sauce">sauce</option>
+    <option value="marinade">marinade</option>
+    <option value="fingerfood">fingerfood</option>
+    <option value="snack">snack</option>
+    <option value="drink">drink</option>
+    </select>
+    <br>
+    <input type="submit" value="Find Recipes" name="response" style="width: 100px;">
+  </form>
+{% if prompt %}
+<div class= 'formtitle'>{{prompt}}</div>
+{% endif %}
+</body>
+</html>
